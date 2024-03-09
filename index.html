@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Generador</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <section>
+        
+            <img src="https://scontent.fppn1-1.fna.fbcdn.net/v/t39.30808-6/376830927_248071388217791_86617118329585033_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=tM9IM3yU6z0AX9UrJ28&_nc_ht=scontent.fppn1-1.fna&oh=00_AfBSELLHKP8cq0PxQIpGhRleNjaI5t240FqWCg_B9Z3yiQ&oe=65F1A254"> 
+
+        
+    
+        <div class="group">
+            <label for="quantity"><strong>Cantidad:</strong></label>
+            <input type="number" id="quantity" name="quantity" min="0" value="0">
+        </div>
+    
+        <div class="group">
+            <label for="code-type"><strong>Tipo:</strong></label>
+            <select id="code-type" name="code-type">
+                <option value="0">Usuario / Vacía</option>
+                <option value="1">Usuario / Contraseña</option>
+                <option value="2">Usuario = Contraseña</option>
+            </select>
+        </div>
+    
+        <div class="group">
+            <label for="profile"><strong>Perfil:</strong></label>
+            <select id="profile" name="profile"></select>
+        </div>
+    
+        <div class="group d-none" id="custom-profile">
+            <label for="custom-profile-input"><strong>Perfil Personalizado:</strong></label>
+            <input type="text" id="custom-profile-input" name="custom-profile-input" style="width: 60%; margin-top: 5px;" placeholder="Ingrese el nombre del perfil">
+        </div>
+    
+        <div class="group">
+            <label for="char-type"><strong>Caracteres:</strong></label>
+            <select id="char-type" name="char-type">
+                <option value="numeric">Números (0-9)</option>
+                <option value="alpha">Letras (A-Z a-z)</option>
+                <option value="alphanumeric">Alfanuméricos (A-Z a-z 0-9)</option>
+                <option value="custom">Personalizado</option>
+            </select>
+        </div>
+    
+        <div class="group d-none" id="custom-chars">
+            <label for="custom-chars-input"><strong>Caracteres personalizados:</strong></label>
+            <input type="text" id="custom-chars-input" name="custom-chars-input" placeholder="A3B2C5, abcdef, 123456, ..." style="width: 60%;">
+        </div>
+    
+        <div class="group">
+            <label for="hotspot-server"><strong>Servidor hotspot:</strong></label>
+            <select id="hotspot-server" name="hotspot-server"></select>
+        </div>
+
+        <div class="group d-none" id="custom-server">
+            <label for="custom-server-input"><strong>Servidor personalizado:</strong></label>
+            <input type="text" id="custom-server-input" name="custom-server-input" placeholder="Nombre del servidor" style="width: 60%;">
+        </div>
+    
+        <div class="group time-group">
+            <label for="uptime-days"><strong>Días:</strong></label>
+            <input type="number" id="uptime-days" name="uptime-days" min="0" value="0">
+            <label for="uptime-hours"><strong>Horas:</strong></label>
+            <input type="number" id="uptime-hours" name="uptime-hours" min="0" value="0">
+            <label for="uptime-minutes"><strong>Minutos:</strong></label>
+            <input type="number" id="uptime-minutes" name="uptime-minutes" min="0" value="0">
+            <label for="uptime-seconds"><strong>Segundos:</strong></label>
+            <input type="number" id="uptime-seconds" name="uptime-seconds" min="0" value="0">
+        </div>
+    
+        <div class="group">
+            <label for="traffic-limit"><strong>Límite de tráfico (Megas):</strong></label>
+            <input type="number" id="traffic-limit" name="traffic-limit" min="0" value="0">
+        </div>
+    
+        <div class="group">
+            <label><strong>Longitud:</strong></label>
+            <input type="range" id="pin-length" name="pin-length" min="4" max="10" value="4">
+            <label for="pin-length" style="width: 0.75rem;"><span id="pin-length-label">4</span></label>
+        </div>
+    
+        <div class="group">
+            <label for="price"><strong>Precio:</strong></label>
+            <input type="number" id="price" name="price" min="0" step="0.01" value="0">
+        </div>
+    
+        <div class="group" id="message-field-group">
+            <label for="message-field"><strong>Mensaje (opcional):</strong></label>
+            <input type="text" id="message-field" name="message-field" placeholder="Ingrese un mensaje (opcional)." style="width: 60%;">
+        </div>
+
+        <div class="group group-buttons">
+            <button id="btnGenerate" class="red">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                    <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                </svg>
+                <strong>Generar</strong>
+            </button>
+            <button id="btnCopy" class="gray" disabled>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+                    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                </svg>
+                <strong>
+                    Copiar script
+                </strong>
+            </button>
+            <button id="btnDownload" class="gray" disabled>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-cloud-arrow-down-fill" viewBox="0 0 16 16">
+                    <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2m2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708"/>
+                </svg>
+                <strong>
+                    Descargar script
+                </strong>
+            </button>
+            <button id="btnPrint" class="gray" disabled>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-printer-fill" viewBox="0 0 16 16">
+                    <path d="M5 1a2 2 0 0 0-2 2v1h10V3a2 2 0 0 0-2-2zm6 8H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1"/>
+                    <path d="M0 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2H2a2 2 0 0 1-2-2zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/>
+                </svg>
+                <strong>
+                    Imprimir
+                </strong>
+            </button>
+            <button id="btnClean" class="gray" disabled>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                </svg>
+                <strong>
+                    Limpiar Todo
+                </strong>
+            </button>
+        </div>
+    
+        <h3>Script Generado:</h3>
+        <textarea id="generated-list" readonly></textarea>
+
+        <div id="copyright">
+            <p>Copyright © 2024 MikroTik Generador</p>
+        </div>
+    </section>
+
+    <div id="code-container" class="code-container"></div>
+
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/info.js"></script>
+    <script src="js/app.js"></script>
+    <script> document.addEventListener('DOMContentLoaded', start); </script>
+</body>
+
+</html>

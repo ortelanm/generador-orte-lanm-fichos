@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 10px;
+    background-color: #ffffff;
+}
+
+img{
+    
+    text-align: center;
+    width: 120px;
+    height: 100px;
+    
+}
+
+h2 {
+    color: #333333;
+}
+
+button.red,
+button.green,
+button.blue,
+button.yellow,
+button.purple,
+button.gray {
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    transition: filter 0.3s;
+    margin: 5px;
+}
+
+button.gray {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+button.red {
+    background-color: #E74C3C;
+}
+
+button.green {
+    background-color: #4CAF50;
+}
+
+button.blue {
+    background-color: #3498DB;
+}
+
+button.yellow {
+    background-color: #F39C12;
+}
+
+button.purple {
+    background-color: #9b59b6;
+}
+
+button:hover {
+    filter: brightness(80%);
+    color: #ffffff;
+}
+
+#generated-list {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 96%;
+    height: 100px;
+    resize: none;
+}
+
+#pin-length-label {
+    margin-top: 5px;
+}
+
+.group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+
+
+.group-buttons button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.group-buttons .bi {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 0 0.5rem 0 0;
+}
+
+.group label {
+    width: 20%;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.group input,
+.group select,
+.group input[type="text"] {
+    width: 15%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.time-group label {
+    width: 8%;
+    text-align: right;
+    margin-right: 5px;
+}
+
+.time-group input {
+    width: 10%;
+}
+
+.code-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.code-card {
+    margin: 5px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+    page-break-inside: avoid;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.code-card:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.code {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333333;
+}
+
+#copyright {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #777;
+}
+
+.d-none {
+    display: none;
+}
+
+@media print {
+    button {
+        display: none;
+    }
+}
